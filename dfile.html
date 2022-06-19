@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('dfile',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:"D-File"},
+			localdir: {value:""},
+			prefile: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"dfile";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="dfile">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" name="D_File" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-localdir" style="width:140px"><i class="fa fa-folder"></i> Local directory</label>
+        <input type="text" id="node-input-localdir" placeholder="/redcode/txtfile" style="width:60%">
+    </div>
+    <div class="form-row">
+        <label for="node-input-prefile" style="width:140px"><i class="fa fa-file"></i> Prefile</label>
+        <input type="text" id="node-input-prefile" placeholder="tentram_" style="width:60%">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="dfile">
+    <p>Auto create text file</p>
+</script>
